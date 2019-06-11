@@ -10,6 +10,6 @@ import com.shopping.orders.entities.Account;
 @Repository
 public interface AccountDao extends JpaRepository<Account, Long>{
 
-	public Optional<Account> findByCustomerId(Long customerId);
+	public Optional<Account> findByAccountId(Long accountId);
 		
 }

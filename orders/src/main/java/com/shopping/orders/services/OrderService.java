@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.shopping.orders.dao.AccountDao;
 import com.shopping.orders.dao.OrderDao;
@@ -17,7 +18,7 @@ import com.shopping.orders.exceptions.OrderPlacingBusinessException;
 import com.shopping.orders.model.Item;
 import com.shopping.orders.model.OrderVO;
 
-
+@Service
 public class OrderService {
 	
 	
@@ -30,8 +31,8 @@ public class OrderService {
 	
 	public OrderVO checkOut(Long accountId) throws OrderPlacingBusinessException{
 
-		//Get Customer Detail
-		Optional<Account> account = accountDao.findByCustomerId(accountId);
+		//Get User  Account Detail
+		Optional<Account> account = accountDao.findByAccountId(accountId);
 		
 		if(account.isPresent()==false) 
 			throw new OrderPlacingBusinessException("Account does not exist.","EC001");//TODO: Create a new POJO with static final constansts variables for ERROR CONSTANTS or ENUMs
@@ -42,7 +43,7 @@ public class OrderService {
 		OrderVO orderVO =  new OrderVO();
 		
 		
-		//Setting Customer details
+		//Setting user account details
 		orderVO.setAccountId(accountId);
 		orderVO.setAccountHolderName(account.get().getName());
 		orderVO.setDate(new Date());

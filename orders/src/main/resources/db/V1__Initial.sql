@@ -1,4 +1,3 @@
- 
 CREATE TABLE IF NOT EXISTS product (
   	product_id INT NOT NULL AUTO_INCREMENT,
   	product_name VARCHAR(128) NULL,
@@ -23,4 +22,3 @@ CREATE TABLE IF NOT EXISTS order_table (
   	status VARCHAR(64) NOT NULL,
   	PRIMARY KEY (order_id)
 );
-  

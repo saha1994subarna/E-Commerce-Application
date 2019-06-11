@@ -9,8 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import com.shopping.orders.entities.Product;
 @Entity
 @Table(name="order_table")
 public class Order {
