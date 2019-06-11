@@ -2,12 +2,18 @@ package com.shopping.orders.model;
 
 import java.math.BigDecimal;
 
+//import lombok.Data;
+
+
+//@Data
 public class Item {
 	private long itemId;
 	private String itemName;
 	private BigDecimal unitPrice;
 	private long numberOfUnits;
 	private BigDecimal totalAmount;
+	//If you have lombok plugin installed we can remove getter setters 
+	
 	public long getItemId() {
 		return itemId;
 	}

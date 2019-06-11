@@ -8,13 +8,8 @@ import org.springframework.stereotype.Repository;
 import com.shopping.orders.entities.Account;
 import com.shopping.orders.entities.Order;
 
-
-
-
-
 @Repository
 public interface OrderDao extends JpaRepository<Order, Long>{
-
 		
 		public List<Order> findByAccountAndStatus(Account account, String status);
 
