@@ -1,0 +1,13 @@
+com\shopping\orders\entities\Account.class
+com\shopping\orders\entities\Product.class
+com\shopping\orders\entities\Order.class
+com\shopping\orders\model\Item.class
+com\shopping\orders\exceptions\OrderPlacingBusinessException.class
+com\shopping\orders\dao\OrderDao.class
+com\shopping\orders\dao\ProductDao.class
+com\shopping\orders\controller\OrderController.class
+com\shopping\orders\exceptions\OrderPlacingTechnicalException.class
+com\shopping\orders\dao\AccountDao.class
+com\shopping\orders\EcommerceApplication.class
+com\shopping\orders\services\OrderService.class
+com\shopping\orders\model\OrderVO.class
