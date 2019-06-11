@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS account (
   	PRIMARY KEY (account_id)
 );
   
-CREATE TABLE IF NOT EXISTS order (
+CREATE TABLE IF NOT EXISTS order_table (
   	order_id INT NOT NULL AUTO_INCREMENT,
   	account_id INT NOT NULL,
   	product_id INT NOT NULL,
